@@ -17,13 +17,15 @@
                         border: 0.1rem solid var(--blackish);
                         border-left:none ;
                         i {
-                            margin-top: 0.5rem;
+                            margin-top: 0.6rem;
+                            margin-right: 0.4rem;
                         }
                     }
                 }
                 select{
                     margin-bottom: 0.5rem;
                     margin-top: 0.5rem;
+                    padding: 0.7rem 1rem;
                 }
                 input[type="date"]{
                     color: rgba(0, 0, 0,0.6);
@@ -72,16 +74,28 @@
                         font-size: 0.8rem;
                         /* margin-top: 0.3rem; */
                         text-align: initial;
-                       
+                        font-family: 'Nexa Light';
                         margin: 0.5rem 0rem;
                         margin-left: 1rem;
                         }
                     }
                     input {
                         margin: 0.2rem 0;
+                        font-family: 'Nexa Light';
+                        padding: 0.6rem 1rem;
+
                     }
                     button {
                         margin-top: 0.3rem;
+                    }
+                    .tagify{
+                        font-family: 'Nexa Light';
+                        font-size: 0.75rem;
+                        padding: 0.3rem 0rem;
+                        margin-top: 0.3rem;
+                        margin-bottom: 0.3rem;
+                       
+                        
                     }
                 }
 

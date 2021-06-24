@@ -291,4 +291,8 @@ nav #navbar_buttons .tvastraplus {
 nav #navbar_buttons .login-button {
   display: none;
 }
+
+nav #navbar_buttons .quote-button {
+  margin-right: 4rem;
+}
 /*# sourceMappingURL=emaillogin.css.map */

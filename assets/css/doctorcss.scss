@@ -99,6 +99,13 @@ $red :red;
     .main{
         .filter{
             display: none;
+            form {
+                .filter-search {
+                    .filter-show-less{
+                        display: none;
+                    }
+                }
+            }
         }
         .doctor-boxs{
             .doctor-box{

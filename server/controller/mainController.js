@@ -241,7 +241,7 @@ const doctor = (req,res)=>{
             var pageno = parseInt(req.body.pageno);
             console.log("pageno",pageno);
             var st = 0;
-            var et = 2;
+            var et = 3;
             var noofuser = user.length
 
             

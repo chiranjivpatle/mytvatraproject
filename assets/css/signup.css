@@ -186,12 +186,14 @@ nav #navbar_buttons .login-button {
 }
 
 .main .login-box .form form .passwordclass span i {
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
+  margin-right: 0.4rem;
 }
 
 .main .login-box .form form select {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
 }
 
 .main .login-box .form form input[type="date"] {
@@ -258,16 +260,27 @@ nav #navbar_buttons .login-button {
   font-size: 0.8rem;
   /* margin-top: 0.3rem; */
   text-align: initial;
+  font-family: 'Nexa Light';
   margin: 0.5rem 0rem;
   margin-left: 1rem;
 }
 
 .main .login-box .form form #doctor_div input {
   margin: 0.2rem 0;
+  font-family: 'Nexa Light';
+  padding: 0.6rem 1rem;
 }
 
 .main .login-box .form form #doctor_div button {
   margin-top: 0.3rem;
+}
+
+.main .login-box .form form #doctor_div .tagify {
+  font-family: 'Nexa Light';
+  font-size: 0.75rem;
+  padding: 0.3rem 0rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 .alert {

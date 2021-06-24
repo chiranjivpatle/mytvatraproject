@@ -193,7 +193,7 @@ section .col2 .patientDetails form .row2 .buttons .buttonContainer button {
 }
 
 .date-container .date-groups .dates {
-  width: 16rem;
+  width: 15rem;
   text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -205,10 +205,6 @@ section .col2 .patientDetails form .row2 .buttons .buttonContainer button {
   .date-container .date-groups .dates {
     padding-bottom: 1.5rem;
   }
-}
-
-.date-container .date-groups .dates:hover {
-  border-bottom: 3px solid #0c71a7;
 }
 
 .date-container .date-groups .dates h4 {
@@ -378,6 +374,9 @@ section .col2 .patientDetails form .row2 .buttons .buttonContainer button {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  section .date-container .date-groups .dates {
+    width: 13rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -412,6 +411,10 @@ section .col2 .patientDetails form .row2 .buttons .buttonContainer button {
             flex-direction: row;
     -webkit-column-gap: 1rem;
             column-gap: 1rem;
+  }
+  section .date-container .date-groups .dates {
+    width: 11rem;
+    margin-left: 3rem;
   }
 }
 

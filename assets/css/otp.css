@@ -204,18 +204,18 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-left: 0.2rem solid violet;
+  border-left: 0.2rem solid var(--green);
 }
 
 .alert i {
-  color: violet;
+  color: var(--green);
   z-index: 1;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
 }
 
 .alert .alert_content h5 {
-  color: violet;
+  color: var(--green);
   z-index: 1;
   padding: 0;
   margin: 0;
@@ -223,7 +223,7 @@ h5 {
 
 .alert .alert_content p {
   font-size: 0.8rem;
-  color: violet;
+  color: var(--green);
   z-index: 1;
   padding: 0;
   margin: 0;

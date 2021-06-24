@@ -73,7 +73,11 @@
                         <div class="filter-bar">
                             <h5> Filter By </h5>
                         </div>
-                        <input type="hidden" id="aakhiri_umeed" value="<%= data.emp %>">
+                        <% if(data.emp){ %>
+                            <input type="hidden" id="aakhiri_umeed" value="<%= data.emp %>">
+                        <% }else{ %>
+                            <input type="hidden" id="aakhiri_umeed" value="">
+                        <% } %>
                         <form action="/doctor" method="POST" id="filterform">
                             <div class="filter-buttons">
                             
@@ -120,8 +124,8 @@
                                         } %>
                                     </ul>
                                 </div>
-                                <div class="filter-show-more" onclick="fltr_showMore(0)" ><a href="#">+ show more</a></div>
-                                <div class="filter-show-less"  onclick="fltr_showMore(0)" ><a href="#">+ show less</a></div>
+                                <div class="filter-show-more" onclick="fltr_showMore(0)" ><a >+ show more</a></div>
+                                <div class="filter-show-less"  onclick="fltr_showMore(0)" ><a >- show less</a></div>
 
     
                            
@@ -167,8 +171,8 @@
                                         } %>
                                     </ul>
                                 </div>
-                                <div class="filter-show-more" onclick="fltr_showMore(0)" ><a href="#">+ show more</a></div>
-                                <div class="filter-show-less"  onclick="fltr_showMore(0)" ><a href="#">+ show less</a></div>
+                                <div class="filter-show-more" onclick="fltr_showMore(1)" ><a >+ show more</a></div>
+                                <div class="filter-show-less"  onclick="fltr_showMore(1)" ><a >- show less</a></div>
 
     
                             </div>
@@ -214,8 +218,8 @@
                                         } %>
                                     </ul>
                                 </div>
-                                <div class="filter-show-more" onclick="fltr_showMore(0)" ><a href="#">+ show more</a></div>
-                                <div class="filter-show-less"  onclick="fltr_showMore(0)" ><a href="#">+ show less</a></div>
+                                <div class="filter-show-more" onclick="fltr_showMore(2)" ><a >+ show more</a></div>
+                                <div class="filter-show-less"  onclick="fltr_showMore(2)" ><a >- show less</a></div>
 
     
                             </div>
@@ -261,8 +265,8 @@
                                         } %>
                                     </ul>
                                 </div>
-                                <div class="filter-show-more" onclick="fltr_showMore(0)" ><a href="#">+ show more</a></div>
-                                <div class="filter-show-less"  onclick="fltr_showMore(0)" ><a href="#">+ show less</a></div>
+                                <div class="filter-show-more" onclick="fltr_showMore(3)" ><a >+ show more</a></div>
+                                <div class="filter-show-less"  onclick="fltr_showMore(3)" ><a >- show less</a></div>
 
     
                             </div>

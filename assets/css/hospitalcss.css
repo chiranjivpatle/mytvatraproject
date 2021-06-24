@@ -42,7 +42,6 @@
 .doc_details .doc_name {
   border: 0.1rem solid var(--select_grey);
   margin-bottom: 1rem;
-  height: 18.5%;
 }
 
 .doc_details .doc_certi_img img {

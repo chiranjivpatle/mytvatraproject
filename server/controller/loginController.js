@@ -307,7 +307,7 @@ const signup = (req,res)=>{
     user
         .save(user)
         .then(data => {
-            
+            req.session.succ_message =  "You have successfully signed up." ;
             res.redirect('/emaillogin')
         })
         .catch(err =>{

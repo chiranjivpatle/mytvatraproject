@@ -161,7 +161,7 @@ section {
             height: 10rem;
         }
         .dates{
-            width: 16rem;
+            width: 15rem;
             text-align: center;
             transition: 0.3s;
             height: 2rem;
@@ -170,7 +170,7 @@ section {
                 padding-bottom: 1.5rem;
             }
             &:hover{
-               border-bottom: 3px solid $i;
+            //    border-bottom: 3px solid $i;
             }
             h4 {
                 margin: 0;
@@ -289,12 +289,15 @@ section {
             }
         }
         }
+        .date-container{
+            .date-groups{
+               .dates{
+                    width: 13rem;
+               }
+           }
+       }
     }
 }
-// .date-container{
-//     .date-groups{
-//         .dates{
-//             width: 16rem;
 //             height: 2.7rem;
 //         }
       
@@ -353,6 +356,14 @@ section {
                 }
             }
         }
+        .date-container{
+            .date-groups{
+               .dates{
+                width: 11rem;
+                margin-left: 3rem;
+               }
+           }
+       }
     }
     // .date-container{
     //     .date-groups{
