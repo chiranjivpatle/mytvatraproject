@@ -236,6 +236,10 @@ body {
   margin: 0.5rem 0;
 }
 
+.profile .dashbord_content1 .border_div .last_class textarea {
+  width: -webkit-fill-available;
+}
+
 .profile .dashbord_content2 {
   background: white;
   display: block;

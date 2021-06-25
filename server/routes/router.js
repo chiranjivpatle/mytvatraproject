@@ -49,8 +49,14 @@ router.route("/create_password").post(loginController.create_password);
 
 router.route("/doctor").get(loginController.checkLogin,mainController.doctor);
 router.route("/doctor").post(mainController.doctor);
+router.route("/doctor_profile").get(upload.single('file'),mainController.doctor_profile);
+router.route("/bookappointment").post(mainController.bookappointment);
+
+
 
 router.route("/hospital").get(loginController.checkLogin,mainController.hospital);
+router.route("/about_hospital").get(mainController.about_hospital);
+
 
 router.route("/aboutus").get(loginController.checkLogin,mainController.aboutus);
 router.route("/tvastraplus").get(loginController.checkLogin,mainController.tvastraplus);

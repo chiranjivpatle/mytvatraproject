@@ -201,7 +201,7 @@ nav #navbar_buttons .login-button {
 }
 
 .alert span {
-  color: var(--grey);
+  color: red;
   z-index: 1;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
@@ -219,18 +219,18 @@ nav #navbar_buttons .login-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-left: 0.2rem solid green;
+  border-left: 0.2rem solid var(--green);
 }
 
 .alerttwo i {
-  color: green;
+  color: var(--green);
   z-index: 1;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
 }
 
 .alerttwo .alert_content h5 {
-  color: green;
+  color: var(--green);
   z-index: 1;
   padding: 0;
   margin: 0;
@@ -238,14 +238,14 @@ nav #navbar_buttons .login-button {
 
 .alerttwo .alert_content p {
   font-size: 0.8rem;
-  color: green;
+  color: var(--green);
   z-index: 1;
   padding: 0;
   margin: 0;
 }
 
 .alerttwo span {
-  color: var(--grey);
+  color: var(--green);
   z-index: 1;
   padding-left: 0.3rem;
   padding-right: 0.3rem;

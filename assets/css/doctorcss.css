@@ -87,7 +87,7 @@
 }
 
 .sort .sort-home {
-  font-family: 'nexa-light';
+  font-family: 'Nexa Light';
 }
 
 .sort select {
@@ -464,7 +464,7 @@ footer .footer-reserve {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-family: nexa-light;
+    font-family: 'Nexa Light';
     font-size: 1.4rem;
   }
   #delhisurgen strong {
@@ -486,7 +486,7 @@ footer .footer-reserve {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-family: nexa-light;
+    font-family: 'Nexa Light';
     font-size: 1.2rem;
   }
   #main {
@@ -556,6 +556,8 @@ footer .footer-reserve {
   }
   #main .main .filter form .filter-search .filter-check-box {
     margin-bottom: 1rem;
+    max-height: 8rem;
+    overflow: hidden;
   }
   #main .main .filter form .filter-search .filter-check-box ul li {
     display: -webkit-box;
@@ -586,7 +588,7 @@ footer .footer-reserve {
     -webkit-text-decoration-line: none;
             text-decoration-line: none;
     font-family: nexa-light;
-    color: blue;
+    color: #0974bb;
   }
   #main .main .doctor-boxs .doctor-box {
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -664,7 +666,7 @@ footer .footer-reserve {
     font-size: 2rem;
   }
   .sort {
-    padding: 1.5rem 7rem;
+    padding: 1.5rem 5.3rem;
   }
   .sort .sort-home {
     font-weight: bold;
@@ -699,7 +701,7 @@ footer .footer-reserve {
     border-radius: 1rem;
     font-size: 0.7rem;
     font-weight: bold;
-    font-family: 'nexa-light';
+    font-family: 'Nexa Light';
   }
   #main .main .filter form .filter-buttons .fil-button i {
     margin-left: 0.5rem;
@@ -709,6 +711,7 @@ footer .footer-reserve {
   }
   #main .main .filter form .filter-search .filter-type .heading {
     font-weight: bold;
+    font-family: 'Nexa Light';
   }
   #main .main .filter form .filter-search .filter-type .logos .logo-minus i {
     margin-left: 1rem;

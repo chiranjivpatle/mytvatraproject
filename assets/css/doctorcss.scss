@@ -18,7 +18,7 @@
 
 $fil-button-border:rgba(0,0,0,.2);
 $doctor-box-border:rgba(0,0,0,.2);
-$show-more:blue;
+$show-more:rgb(9, 116, 187);
 
 $delhi_gra:rgba(133,178,196,0.9);
 $filter_bar:rgb(217, 221, 223);
@@ -78,7 +78,7 @@ $red :red;
     align-items: center;
     padding: 0rem 1rem;
     .sort-home{
-        font-family: 'nexa-light';
+        font-family: 'Nexa Light';
     }
     select{
         padding: 0.5rem 0.6rem;
@@ -367,7 +367,7 @@ footer{
     height: 10rem;
     display: flex;
     align-items: center;
-    font-family: nexa-light;
+    font-family: 'Nexa Light';
     font-size: 1.4rem;
     strong{
         font-weight:900 ;
@@ -383,7 +383,7 @@ footer{
     .sort-home{
         display: flex;
         align-items: center;
-        font-family: nexa-light;
+        font-family: 'Nexa Light';
         font-size: 1.2rem;
     }
 }
@@ -443,7 +443,11 @@ footer{
                     }
                     .filter-check-box{
                         margin-bottom: 1rem;
+                        max-height: 8rem;
+                        overflow: hidden;
+                        
                         ul{
+                           
                             li{
                                 display: flex;
                                 align-items: center;
@@ -566,7 +570,7 @@ footer{
 }
 // ...........sort.........................................
  .sort {
-       padding: 1.5rem 7rem;
+       padding: 1.5rem 5.3rem;
        .sort-home{
         font-weight: bold;
        }
@@ -596,7 +600,7 @@ footer{
                         border-radius: 1rem;
                         font-size: 0.7rem;
                         font-weight: bold;
-                        font-family: 'nexa-light';
+                        font-family: 'Nexa Light';
                         i{
                             margin-left: 0.5rem;
                         }
@@ -607,6 +611,8 @@ footer{
                     .filter-type{
                         .heading{
                             font-weight: bold;
+                            font-family: 'Nexa Light';
+
                         }
                         .logos{
                             .logo-minus{

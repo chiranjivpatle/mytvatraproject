@@ -237,32 +237,13 @@
     
                                 <div class="filter-check-box">
                                     <ul>
-                                        <%
-                                        var emtarr = []; 
-                                        for(var i=0; i < data.all_doc_check.length; i++) { 
-                                            var typehospital= data.all_doc_check[i].experience.split(",")
-                                            for(var j=0; j< typehospital.length ;j++) {
-                                                if(emtarr.length > 0){
-                                                    for(var k=0; k < emtarr.length; k++){
-                                                     var ok = 0;
-                                                        if(typehospital[j] == emtarr[k] ){
-                                                            k = emtarr.length;
-                                                        }else{
-                                                             ok = 1;
-                                                        }
-                                                    }
-                                                    if(ok){
-                                                        emtarr.push(typehospital[j]); 
-                                                        %>
-                                                        <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id = "<%= typehospital[j] %>" value="<%= typehospital[j] %>"><%= typehospital[j] %></li>
-                                            <%
-                                                    }
-                                                }else{ 
-                                                    emtarr.push(typehospital[j])  %>
-                                                    <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id = "<%= typehospital[j] %>" value="<%= typehospital[j] %>"><%= typehospital[j] %></li>
-                                             <%   }
-                                           } 
-                                        } %>
+                                        <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id ="0" value="0"> 0+</li>
+                                        <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id ="5" value="5"> 5+</li>
+                                        <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id ="10" value="10"> 10+</li>
+                                        <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id ="15" value="15"> 15+</li>
+                                        <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id ="20" value="20"> 20+</li>
+                                        <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id ="25" value="25"> 25+</li>
+                                        <li> <input type="checkbox"  onchange="this.form.submit()" name="experience" id ="30" value="30"> 30+</li>                                  
                                     </ul>
                                 </div>
                                 <div class="filter-show-more" onclick="fltr_showMore(3)" ><a >+ show more</a></div>
@@ -828,7 +809,7 @@
                                                 targetmore.style.display = "none" ;
                                                 targetless.style.display = "block" ;
                                             }else{
-                                                target.style.maxHeight = "9.2rem"
+                                                target.style.maxHeight = "8rem"
                                                 targetmore.style.display = "block" ;
                                                 targetless.style.display = "none" ;
                                             }
@@ -836,6 +817,16 @@
                                         };
                                             
     
+                    </script>
+                     <script>
+                        function popupremove() {
+                            var h = document.querySelector(".alert");
+                          setTimeout(function(){ h.style.display = "none" }, 2000);
+                    
+                        //   var hh = document.querySelector(".alerttwo");
+                        //   setTimeout(function(){ hh.style.display = "none" }, 2000);
+                     }
+                     popupremove();   
                     </script>
            
     

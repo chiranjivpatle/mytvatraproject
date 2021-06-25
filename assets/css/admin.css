@@ -36,7 +36,7 @@
   margin-left: 15px;
   font-weight: bold;
   float: right;
-  color: red;
+  color: green;
   font-size: 2rem;
   line-height: 20px;
   cursor: pointer;
@@ -318,6 +318,10 @@
 .profile .dashbord_content1 form .inputgroup h3 {
   margin: 0.5rem 0;
   color: #167ddd;
+}
+
+.profile .dashbord_content1 form .inputgroup textarea {
+  width: -webkit-fill-available;
 }
 
 @media only screen and (min-width: 768px) {

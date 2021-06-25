@@ -9,7 +9,8 @@ var schema = new mongoose.Schema({
     email : {
         type: String,
         required: true,
-        index:true
+        index:true,
+        unique : true,
     },
     password : {
         type : String,
@@ -23,7 +24,7 @@ var schema = new mongoose.Schema({
     },
     mobileNo : {
         type : Number,
-        unique : true,
+        
         required : true
     },
 
@@ -57,7 +58,7 @@ var schema = new mongoose.Schema({
         type: String
     },
     experience :{
-        type: String
+        type: Number
     },
     qualification :{
         type: String
@@ -69,7 +70,7 @@ var schema = new mongoose.Schema({
         type: String
     },
     fees :{
-        type: String
+        type: Number
     },
     yourself :{
         type: String

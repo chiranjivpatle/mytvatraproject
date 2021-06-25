@@ -37,11 +37,11 @@
         <div class="container1">
             <h1>Find Affordable Healthcare </h1>
             <p> Join the thousend of other who have exercised their rights to quality healthcare at a price you can afford</p>
-                <form class="form">
+                <form class="form" method="POST" action="/doctor">
                     
                     <div class="location">
                         <div class="healthcare_icon1"><i class="fa fa-map-marker"></i></div>
-                        <input type="text" class="search1" placeholder= "Ahmedabad">
+                        <input type="text" class="search1" placeholder= "Ahmedabad" name="city">
                         <div class="healthcare_icon2"><i class="fa fa-crosshairs"></i></div>
                     </div>
                     <div class="forsearch">
@@ -918,6 +918,16 @@ var slideInd = 1;
         
       
   </script>    
+   <script>
+    function popupremove() {
+        var h = document.querySelector(".alert");
+      setTimeout(function(){ h.style.display = "none" }, 2000);
+
+    //   var hh = document.querySelector(".alerttwo");
+    //   setTimeout(function(){ hh.style.display = "none" }, 2000);
+ }
+ popupremove();   
+</script>
 
 </body>
 </html>

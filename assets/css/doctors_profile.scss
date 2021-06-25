@@ -120,11 +120,15 @@ input {
         grid-column-gap: 1rem;
         
     
+    form {
+        justify-content: inherit;
+        align-items: inherit;
 
-    .photo-and-butn {
-        grid-column-start: 2;
-        height: 50vh;
-        width: 90%;
+        .photo-and-butn {
+            grid-column-start: 2;
+            height: 50vh;
+            width: 90%;
+        }
         
         
         
@@ -164,13 +168,16 @@ input {
         
     
 
-
+form {
+    justify-content: inherit;
+    align-items: inherit;
 .photo-and-butn {
     width: 92%;
 }
 .photoone {
-    height: 16rem;
+    height: 10rem;
     
+}
 }
 }
 }

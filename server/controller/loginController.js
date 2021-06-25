@@ -212,7 +212,7 @@ const otp_send =(req, res)=> {
         console.log("err.response.status:", err.response.status)
 
         if( 404 == err.response.status ){
-            req.session.otp_err = "enter correct otp"
+            req.session.otp_error = "enter correct otp"
             res.redirect('/otp');
         }
         if( 409 == err.response.status ){
@@ -220,7 +220,7 @@ const otp_send =(req, res)=> {
             res.redirect('/otp');
         }
         if( 410 == err.response.status ){
-            req.session.otp_err = "The code is expired";
+            req.session.otp_error = "The code is expired";
             res.redirect('/otp');
         }
         res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
@@ -266,10 +266,10 @@ const create_password = (req,res)=>{
     if(  req.body.password == req.body.confirm_password ){
         var number = req.session.number ;
             delete req.session.number ;
-            Userdb.updateOne( {'number' : number}, {$set:{"password" : password }}  )
+           models.Userdb.updateOne( {'mobileNo' : number}, {$set:{"password" : password }}  )
                 .then(user => {
                     console.log("update succsesful")
-                    req.session.succ_message = "You have successfully logged in." ;
+                    req.session.succ_message = "You have successfully set password." ;
                     res.redirect("/emaillogin");
                     
                 })
@@ -286,12 +286,15 @@ const create_password = (req,res)=>{
 
 const signup = (req,res)=>{
     // validate request
-  
-   
+    
+        var nname = req.body.name;
+
+        var rbn = nname.charAt(0).toUpperCase() + nname.slice(1);
+        console.log("rbnnnnnnnnnnnnnnnnnnnnn",rbn);
     
         const user = new models.Userdb({
-        name : req.body.name,
-        email : req.body.email,
+        name : rbn,
+        email : req.body.email.toLowerCase(),
         password : req.body.password,
         gender : req.body.gender,
         birthdate : req.body.birthdate,
@@ -316,7 +319,7 @@ const signup = (req,res)=>{
                
             //     message : err.message || "Some error occurred while creating a create operation"
                
-                req.session.error_message = "please enter all details";
+                req.session.error_message = "Email is already registered";
                 res.redirect('/signup');
             
             
@@ -416,10 +419,15 @@ const signup = (req,res)=>{
 
 const signupdoc =(req,res)=> {
    
+    var nname2 = req.body.name;
+
+    var rbn2 = nname2.charAt(0).toUpperCase() + nname2.slice(1);
+    console.log("rbnnnnnnnnnnnnnnnnnnnnn",rbn2);
+
   var objectofall =
       {
-      name  :  req.body.name,
-      email: req.body.email,
+      name  :  rbn2,
+      email: req.body.email.toLowerCase(),
       password:  req.body.password,
       birthdate:  req.body.birthdate,
       mobileNo: req.body.mobileNo,
@@ -430,6 +438,7 @@ const signupdoc =(req,res)=> {
       doctor : "doctor"
     }
     req.session.objectofall = objectofall ;
+    req.session.succ_message =  "You have successfully signed up."
     res.render("signup", data = { user: false , doclog : true })
     
 }

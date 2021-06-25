@@ -140,7 +140,15 @@
     padding-bottom: 1rem;
     grid-column-gap: 1rem;
   }
-  .all-about-doc .photo-and-butn {
+  .all-about-doc form {
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
+    -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+            align-items: inherit;
+  }
+  .all-about-doc form .photo-and-butn {
     -ms-grid-column: 2;
         grid-column-start: 2;
     height: 50vh;
@@ -180,11 +188,19 @@
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
   }
-  .all-about-doc .photo-and-butn {
+  .all-about-doc form {
+    -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+            justify-content: inherit;
+    -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+            align-items: inherit;
+  }
+  .all-about-doc form .photo-and-butn {
     width: 92%;
   }
-  .all-about-doc .photoone {
-    height: 16rem;
+  .all-about-doc form .photoone {
+    height: 10rem;
   }
 }
 /*# sourceMappingURL=doctors_profile.css.map */

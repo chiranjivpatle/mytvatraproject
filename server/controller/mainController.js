@@ -47,7 +47,9 @@ const otp = (req, res) => {
 
 const create_password = (req, res) => {
     if( req.session.password_error ){
-        res.render('createpassword' ,data = { err: req.session.password_error ,user: false });
+        var passerr = req.session.password_error;
+        delete req.session.password_error ;
+        res.render('createpassword' ,data = { err: passerr ,user: false });
     }
     res.render('createpassword' ,data = { err : false , user: false});
 }
@@ -159,13 +161,13 @@ const doctor = (req,res)=>{
             }
         }
         
-        if(typeof(c)== "string") {
-            match.push({experience : {$regex : c,$options:"$i"}})
+        if(typeof(c)== "number") {
+            match.push({experience : {$gte : c}})
         }
         else {
             
             for(var i=0;i < c.length; i++) {
-                match.push({experience : {$regex : c[i],$options:"$i"}})
+                match.push({experience : {$gte : c[i]}})
             }
         }
         
@@ -292,6 +294,28 @@ const doctor = (req,res)=>{
    // res.render("demodoc", data = { user: req.session.userid.user , doctors :user ,err:isdoctor});
     
 }
+const doctor_profile = (req,res)=>{
+
+    models.Userdb.findOne({ _id : req.query.id })
+    .select({name : 1 ,_id : 1,specification:1,hospital:1,qualification:1,experience:1,city:1,fees:1,state:1,file:1,yourself:1,awards:1}) 
+
+    .then(user =>{
+        if(req.session.update_data){
+            res.render("doctor_profile",data = {succ: null,user:req.session.update_data , doctor : user});
+        } else{
+            res.render("doctor_profile",data = {succ: null,user:req.session.userid.user , doctor : user});
+        }
+    })
+    .catch(err =>{
+        res.status(500).send({
+            message : err.message || "Some error occurred while creating a create operation"
+        });
+    })
+
+}
+const bookappointment =(req,res)=>{
+    res.render("bookappointment");
+}
 const hospital = (req,res)=>{
 
     models.hospital_list.find()
@@ -308,6 +332,11 @@ const hospital = (req,res)=>{
     })
     
 }
+const about_hospital =(req,res)=>{
+    res.render("about_hospital");
+}
+
+
 const dentistry = (req,res)=> {
     res.render("dentistry");
 
@@ -1306,7 +1335,10 @@ module.exports = {
     create_password:create_password,
     phonelogin:phonelogin,
     doctor : doctor,
+    doctor_profile : doctor_profile,
+    bookappointment : bookappointment,
     hospital : hospital,
+    about_hospital : about_hospital,
     dentistry : dentistry,
     submit_your_query : submit_your_query,
     aboutus : aboutus,

@@ -31,7 +31,7 @@ $i:rgb(22, 125, 221);
       margin-left: 15px;
       font-weight: bold;
       float: right;
-      color: $red;
+      color: $green;
       font-size: 2rem;
       line-height: 20px;
       cursor: pointer;
@@ -292,6 +292,9 @@ $i:rgb(22, 125, 221);
                 h3{
                     margin: 0.5rem 0;
                     color: $i;
+                }
+                textarea {
+                    width: -webkit-fill-available;
                 }
             }
         }
